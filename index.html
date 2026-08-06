@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lalith ❤️ Priyadharsini — Wedding Invitation</title>
+  <meta name="description" content="Join Lalith and Priyadharsini as they begin one journey together — premium wedding invitation." />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lalith & Priyadharsini — Wedding Invitation">
+  <meta property="og:description" content="Join Lalith and Priyadharsini as they begin one journey together — premium wedding invitation.">
+  <meta property="og:image" content="images/logo.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lalith & Priyadharsini — Wedding Invitation">
+  <meta name="twitter:description" content="Join Lalith and Priyadharsini as they begin one journey together — premium wedding invitation.">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Wedding of Lalith & Priyadharsini",
+    "startDate": "2026-08-23T09:00:00+05:30",
+    "location": {
+      "@type": "Place",
+      "name": "RVG Mahal",
+      "sameAs": "https://maps.app.goo.gl/7skzWcnPxms6Wb5AA"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (optional) with fallback comment -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" aria-hidden="false">
+    <div class="loader-inner">
+      <img src="images/lotus.svg" alt="Golden Lotus" class="loader-logo" />
+      <h2 class="loader-text">Two Hearts...<br/>One Journey...</h2>
+    </div>
+  </div>
+
+  <!-- Audio (hidden) -->
+  <audio id="bg-music" src="music/bg.mp3" preload="none"></audio>
+  <button id="music-toggle" aria-pressed="false" aria-label="Toggle background music" class="music-toggle">
+    <i class="fa-solid fa-music"></i>
+  </button>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="navbar" id="mainNav">
+      <div class="container-fluid">
+        <a class="brand" href="#home"> <img src="images/logo.svg" alt="Logo" class="logo"/> </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#story" class="nav-link">Story</a></li>
+          <li><a href="#couple" class="nav-link">Couple</a></li>
+          <li><a href="#schedule" class="nav-link">Schedule</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#venue" class="nav-link">Venue</a></li>
+          <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+          <li><a href="#family" class="nav-link">Family</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="hero" style="background-image: url('images/hero.svg');">
+      <div class="overlay"></div>
+      <div class="hero-content" data-aos="fade-up">
+        <h1 class="couple-names">Lalith S<br/><span class="heart">❤️</span><br/>Priyadharsini S</h1>
+        <p class="subtitle">Together with our families<br/>request the pleasure of your presence<br/>at our Wedding Ceremony</p>
+        <div class="wedding-details">
+          <div class="day">Sunday</div>
+          <div class="date">23 August 2026</div>
+          <div class="time">9:00 AM</div>
+        </div>
+        <a href="#invitation" class="btn btn-gold btn-lg open-invite">Open Invitation</a>
+      </div>
+    </section>
+
+    <!-- Invitation / Countdown -->
+    <section id="invitation" class="invitation container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="countdown-card">
+            <h3>Countdown to the Wedding</h3>
+            <div id="countdown" class="countdown">
+              <div class="count-item"><span id="days">00</span><small>Days</small></div>
+              <div class="count-item"><span id="hours">00</span><small>Hours</small></div>
+              <div class="count-item"><span id="minutes">00</span><small>Minutes</small></div>
+              <div class="count-item"><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
+            <p class="invitation-note">We would be honoured by your presence.</p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="invitation-card">
+            <h4>Invitation</h4>
+            <p>With the blessing of our families, we invite you to celebrate our wedding.</p>
+            <a href="#rsvp" class="btn btn-outline">RSVP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="story container" data-aos="fade-up">
+      <h2 class="section-title">Our Story</h2>
+      <div class="timeline">
+        <article class="timeline-item" data-aos="fade-right">
+          <img src="images/gallery/img1.svg" alt="First meeting" loading="lazy">
+          <div>
+            <h4>First Meeting</h4>
+            <p>They met and a spark began a lifelong story.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-aos="fade-left">
+          <img src="images/gallery/img2.svg" alt="Friendship" loading="lazy">
+          <div>
+            <h4>Friendship</h4>
+            <p>From friends to partners, they built a bond of trust.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-aos="fade-right">
+          <img src="images/gallery/img3.svg" alt="Proposal" loading="lazy">
+          <div>
+            <h4>Proposal</h4>
+            <p>A special moment, intimate and true.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-aos="fade-left">
+          <img src="images/gallery/img4.svg" alt="Engagement" loading="lazy">
+          <div>
+            <h4>Engagement</h4>
+            <p>Family and friends gathered to celebrate.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-aos="fade-right">
+          <img src="images/gallery/img5.svg" alt="Wedding" loading="lazy">
+          <div>
+            <h4>Wedding</h4>
+            <p>The celebration of love — we invite you to join us.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Couple -->
+    <section id="couple" class="couple container" data-aos="fade-up">
+      <h2 class="section-title">Bride & Groom</h2>
+      <div class="row">
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="profile card">
+            <img src="images/bride.svg" alt="Bride Priyadharsini" loading="lazy" class="profile-photo">
+            <div class="card-body">
+              <h3>Priyadharsini S</h3>
+              <p class="parents">D/O: Mr & Mrs. [Placeholder]</p>
+              <p class="bio">A short elegant introduction about the bride. Warm, kind, and loving.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="profile card">
+            <img src="images/groom.svg" alt="Groom Lalith" loading="lazy" class="profile-photo">
+            <div class="card-body">
+              <h3>Lalith S</h3>
+              <p class="parents">S/O: Mr & Mrs. [Placeholder]</p>
+              <p class="bio">A short elegant introduction about the groom. Gentle, caring, devoted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="schedule container" data-aos="fade-up">
+      <h2 class="section-title">Wedding Schedule</h2>
+      <div class="row">
+        <div class="col-md-3" data-aos="flip-left">
+          <div class="schedule-card">
+            <i class="fa-solid fa-calendar-check icon"></i>
+            <h4>Reception</h4>
+            <p>08:00 AM — Welcome and blessings</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="schedule-card">
+            <i class="fa-solid fa-ring icon"></i>
+            <h4>Wedding Ceremony</h4>
+            <p>09:00 AM — RVG Mahal</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left" data-aos-delay="200">
+          <div class="schedule-card">
+            <i class="fa-solid fa-utensils icon"></i>
+            <h4>Lunch</h4>
+            <p>12:30 PM — Traditional feast</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="flip-left" data-aos-delay="300">
+          <div class="schedule-card">
+            <i class="fa-solid fa-hand-holding-heart icon"></i>
+            <h4>Blessings</h4>
+            <p>01:30 PM — Close with family prayers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery container" data-aos="fade-up">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <!-- 20 placeholders, we include 8 sample SVG placeholders -->
+        <a href="images/gallery/img1.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img1.svg" alt="Gallery 1" loading="lazy">
+        </a>
+        <a href="images/gallery/img2.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img2.svg" alt="Gallery 2" loading="lazy">
+        </a>
+        <a href="images/gallery/img3.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img3.svg" alt="Gallery 3" loading="lazy">
+        </a>
+        <a href="images/gallery/img4.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img4.svg" alt="Gallery 4" loading="lazy">
+        </a>
+        <a href="images/gallery/img5.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img5.svg" alt="Gallery 5" loading="lazy">
+        </a>
+        <a href="images/gallery/img6.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img6.svg" alt="Gallery 6" loading="lazy">
+        </a>
+        <a href="images/gallery/img7.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img7.svg" alt="Gallery 7" loading="lazy">
+        </a>
+        <a href="images/gallery/img8.svg" class="glightbox" data-gallery="wedding">
+          <img src="images/gallery/img8.svg" alt="Gallery 8" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section id="venue" class="venue container" data-aos="fade-up">
+      <h2 class="section-title">Venue</h2>
+      <div class="venue-card">
+        <h3>RVG Mahal</h3>
+        <p>Address and directions to RVG Mahal.</p>
+        <div class="venue-actions">
+          <a href="https://maps.app.goo.gl/7skzWcnPxms6Wb5AA" class="btn btn-outline" target="_blank" rel="noopener">Open Maps</a>
+          <a href="https://maps.app.goo.gl/7skzWcnPxms6Wb5AA" class="btn btn-gold" target="_blank" rel="noopener">Navigate</a>
+        </div>
+        <div class="map-embed">
+          <iframe loading="lazy" src="https://www.google.com/maps?q=RVG+Mahal&output=embed" title="RVG Mahal Map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="rsvp container" data-aos="fade-up">
+      <h2 class="section-title">RSVP</h2>
+      <form id="rsvpForm" class="rsvp-form" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="col-md-6">
+            <label for="phone">Phone *</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+          </div>
+          <div class="col-md-6">
+            <label for="guests">Guests *</label>
+            <input id="guests" name="guests" type="number" min="1" value="1" required>
+          </div>
+          <div class="col-md-6">
+            <label for="attending">Attending *</label>
+            <select id="attending" name="attending" required>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="food">Food Preference</label>
+            <select id="food" name="food">
+              <option>Vegetarian</option>
+              <option>Non-Vegetarian</option>
+              <option>Jain</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <div class="col-12">
+            <p class="form-note">If you prefer, you can configure a Google Form and paste its URL in README instructions — form submission can be set to receive responses automatically.</p>
+            <button type="submit" class="btn btn-gold">Submit RSVP</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Blessings / Testimonials -->
+    <section id="blessings" class="blessings container" data-aos="fade-up">
+      <h2 class="section-title">Blessings</h2>
+      <div class="swiper blessing-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">"Wishing you a lifetime of love and happiness." — Aunty</div>
+          <div class="swiper-slide">"May your marriage be filled with joy and prosperity." — Uncle</div>
+          <div class="swiper-slide">"Blessings and warm wishes on your wedding day." — Friend</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Family -->
+    <section id="family" class="family container" data-aos="fade-up">
+      <h2 class="section-title">Family</h2>
+      <div class="family-columns">
+        <div class="family-side" data-aos="fade-right">
+          <h4>Bride's Family</h4>
+          <ul>
+            <li>Mr & Mrs [Placeholder]</li>
+            <li>Sibling 1</li>
+            <li>Sibling 2</li>
+          </ul>
+        </div>
+        <div class="family-side" data-aos="fade-left">
+          <h4>Groom's Family</h4>
+          <ul>
+            <li>Mr & Mrs [Placeholder]</li>
+            <li>Sibling 1</li>
+            <li>Sibling 2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote container" data-aos="fade-up">
+      <blockquote>
+        <p>"A successful marriage requires falling in love many times, always with the same person."</p>
+      </blockquote>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>With Love<br/>Lalith ❤️ Priyadharsini<br/>23 August 2026</p>
+          <div class="footer-actions">
+            <a href="#home" class="back-top">Back to top</a>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts: defer where appropriate -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/countdown.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
