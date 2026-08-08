@@ -1,0 +1,263 @@
+@media (max-width: 1180px) {
+    .schedule-card {
+        width: calc(50% - 42px);
+        min-height: 220px;
+    }
+
+    .schedule-card:nth-child(odd)::before {
+        right: -55px;
+    }
+
+    .schedule-card:nth-child(even)::before {
+        left: -55px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --container: min(920px, calc(100% - 34px));
+    }
+
+    .nav__toggle {
+        display: block;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 76px;
+        right: 18px;
+        width: min(320px, calc(100vw - 36px));
+        max-height: calc(100vh - 96px);
+        display: grid;
+        gap: 4px;
+        padding: 18px;
+        overflow-y: auto;
+        border: 1px solid rgba(212, 175, 55, 0.34);
+        border-radius: var(--radius);
+        background: var(--nav-mobile-background);
+        box-shadow: var(--shadow-soft);
+        transform: translateY(-16px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+    }
+
+    .nav__menu.is-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav__link,
+    .nav__brand,
+    .site-header.is-scrolled .nav__link,
+    .site-header.is-scrolled .nav__brand {
+        color: var(--nav-scrolled-color);
+        text-shadow: none;
+    }
+
+    .nav__link {
+        padding: 11px 8px;
+    }
+
+    .nav__toggle.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav__toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__toggle.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .invitation__grid,
+    .venue-page {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 18px;
+    }
+
+    .timeline__item,
+    .timeline__item:nth-child(even),
+    .timeline__item:last-child {
+        width: calc(100% - 46px);
+        justify-self: end;
+    }
+
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container: min(100% - 28px, 720px);
+    }
+
+    .section {
+        padding: 78px 0;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding-top: 104px;
+    }
+
+    .hero__details {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: min(330px, 100%);
+    }
+
+    .countdown-card {
+        padding: 24px 18px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline__item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline__item img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .schedule-card {
+        width: calc(50% - 34px);
+        min-height: auto;
+        padding: 30px;
+    }
+
+    .schedule-card:nth-child(odd)::before {
+        right: -47px;
+    }
+
+    .schedule-card:nth-child(even)::before {
+        left: -47px;
+    }
+
+    .map-card,
+    .map-card iframe {
+        min-height: 340px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .nav {
+        min-height: 68px;
+    }
+
+    .nav__menu {
+        top: 68px;
+        right: 14px;
+        width: calc(100vw - 28px);
+    }
+
+    .loader__mark {
+        width: 154px;
+        height: 154px;
+    }
+
+    .loader__logo {
+        width: 106px;
+        height: 106px;
+    }
+
+    .hero__title {
+        font-size: clamp(2.2rem, 13vw, 3.7rem);
+    }
+
+    .section-heading--center {
+        margin-bottom: 38px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown__unit {
+        padding: 18px 8px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline__item,
+    .timeline__item:nth-child(even),
+    .timeline__item:last-child {
+        width: 100%;
+        justify-self: stretch;
+    }
+
+    .schedule-timeline {
+        gap: 26px;
+        padding-left: 26px;
+    }
+
+    .schedule-timeline::before {
+        left: 12px;
+    }
+
+    .schedule-card {
+        width: 100%;
+        align-self: stretch;
+        padding: 24px;
+        text-align: left;
+    }
+
+    .schedule-card:nth-child(odd),
+    .schedule-card:nth-child(even) {
+        align-self: stretch;
+        text-align: left;
+    }
+
+    .schedule-card:nth-child(odd)::before,
+    .schedule-card:nth-child(even)::before {
+        top: 30px;
+        left: -26px;
+        right: auto;
+        width: 18px;
+        height: 18px;
+    }
+
+    .venue-card__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .venue-card {
+        padding: 24px;
+    }
+
+    .music-toggle,
+    .theme-toggle,
+    .back-to-top {
+        right: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    :root {
+        --container: calc(100% - 22px);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero__content {
+        width: calc(100% - 22px);
+    }
+
+    .countdown__value {
+        font-size: 1.65rem;
+    }
+
+}
