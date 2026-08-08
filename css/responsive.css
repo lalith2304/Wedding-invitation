@@ -182,7 +182,15 @@
     }
 
     .hero__title {
-        font-size: clamp(2.2rem, 13vw, 3.7rem);
+        font-size: clamp(2rem, 11vw, 3.2rem);
+    }
+
+    .hero__title span,
+    .footer__names span {
+        max-width: 100%;
+        padding-inline: 0.08em;
+        overflow: visible;
+        overflow-wrap: anywhere;
     }
 
     .section-heading--center {
@@ -252,7 +260,7 @@
         width: 100%;
         grid-template-columns: 1fr;
         row-gap: 4px;
-        font-size: clamp(1.8rem, 9vw, 2.45rem);
+        font-size: clamp(1.65rem, 8vw, 2.2rem);
     }
 
     .footer__names span:first-child,
