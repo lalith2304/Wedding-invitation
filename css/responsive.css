@@ -95,6 +95,18 @@
         --container: min(100% - 28px, 720px);
     }
 
+    [data-aos^="slide"][data-aos^="slide"],
+    [data-aos="slide-left"][data-aos="slide-left"],
+    [data-aos="slide-right"][data-aos="slide-right"] {
+        transform: translate3d(0, 24px, 0) !important;
+    }
+
+    [data-aos^="slide"][data-aos^="slide"].aos-animate,
+    [data-aos="slide-left"][data-aos="slide-left"].aos-animate,
+    [data-aos="slide-right"][data-aos="slide-right"].aos-animate {
+        transform: translate3d(0, 0, 0) !important;
+    }
+
     .section {
         padding: 78px 0;
     }
@@ -234,6 +246,19 @@
 
     .venue-card {
         padding: 24px;
+    }
+
+    .footer__names {
+        width: 100%;
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+        font-size: clamp(1.8rem, 9vw, 2.45rem);
+    }
+
+    .footer__names span:first-child,
+    .footer__names span:last-child,
+    .footer__heart {
+        justify-self: center;
     }
 
     .music-toggle,

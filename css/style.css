@@ -150,10 +150,12 @@ body[data-theme="light"] {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 84px;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    overflow-x: hidden;
     font-family: var(--font-body);
     color: var(--color-ink);
     background: var(--body-background);

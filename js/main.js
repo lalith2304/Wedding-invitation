@@ -108,6 +108,7 @@
     const initAos = () => {
         if (window.AOS) {
             window.AOS.init({
+                disable: window.innerWidth <= 768,
                 duration: 850,
                 easing: "ease-out-cubic",
                 once: true,
