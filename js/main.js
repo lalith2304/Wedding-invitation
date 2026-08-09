@@ -267,7 +267,7 @@
             image.addEventListener("error", () => {
                 image.classList.add("image-fallback");
                 image.alt = image.alt || "Wedding image placeholder";
-                image.src = "images/lotus.png";
+                image.src = "images/logo.png";
             }, { once: true });
         });
     };
