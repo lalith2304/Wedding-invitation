@@ -72,7 +72,7 @@ Update visible wedding details in `index.html`:
 - Date: `23 August 2026`
 - Wedding Muhurtham: `4:30 AM - 6:30 AM`
 - Reception: `9:00 AM - 12:00 AM`
-- Wedding Muhurtham venue: `Aathi Mariamman Temple, Samayapuram`
+- Wedding Muhurtham venue: `Aathi Maariamman Temple, Samayapuram`
 - Wedding Muhurtham map URL: `https://maps.app.goo.gl/s7ie3bsTKAwBdE5VA`
 - Reception venue: `RVG Mahal, Ayyampalayam`
 - Reception map URL: `https://maps.app.goo.gl/7skzWcnPxms6Wb5AA`
