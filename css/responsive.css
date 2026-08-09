@@ -73,7 +73,7 @@
     }
 
     .invitation__grid,
-    .venue-page {
+    .venue-pages {
         grid-template-columns: 1fr;
     }
 
@@ -151,11 +151,6 @@
 
     .schedule-card:nth-child(even)::before {
         left: -47px;
-    }
-
-    .map-card,
-    .map-card iframe {
-        min-height: 340px;
     }
 
 }
