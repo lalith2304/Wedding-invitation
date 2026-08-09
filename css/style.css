@@ -352,6 +352,7 @@ address {
     width: 132px;
     height: 132px;
     object-fit: cover;
+    object-position: 50% 22%;
     border: 2px solid rgba(212, 175, 55, 0.72);
     border-radius: 50%;
     filter: drop-shadow(0 0 22px rgba(244, 223, 148, 0.78));
@@ -459,6 +460,7 @@ address {
     width: 34px;
     height: 34px;
     object-fit: cover;
+    object-position: 50% 22%;
     border: 1px solid rgba(212, 175, 55, 0.72);
     border-radius: 50%;
     box-shadow: 0 0 14px rgba(212, 175, 55, 0.32);
