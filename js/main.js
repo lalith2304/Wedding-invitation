@@ -121,7 +121,7 @@
         const button = getElement(selectors.themeToggle);
         const icon = button?.querySelector("i");
         const stored = localStorage.getItem(storedTheme);
-        let activeTheme = stored || "dark";
+        let activeTheme = stored || "light";
 
         const applyTheme = (theme) => {
             const isLight = theme === "light";
@@ -150,21 +150,35 @@
     const initMusic = () => {
         const button = getElement(selectors.musicToggle);
         const audio = getElement(selectors.audio);
-        let interactionReceived = false;
         let preferredPlaying = localStorage.getItem(storedMusicState) === "true";
 
         if (!button || !audio) {
             return;
         }
 
+        const icon = button.querySelector("i");
+
         const setPlayingUi = (isPlaying) => {
             button.classList.toggle("is-playing", isPlaying);
             button.setAttribute("aria-pressed", String(isPlaying));
             button.setAttribute("aria-label", isPlaying ? "Pause background music" : "Play background music");
+            button.title = isPlaying ? "Pause music" : "Play music";
+
+            if (icon) {
+                icon.className = isPlaying ? "fa-solid fa-pause" : "fa-solid fa-music";
+            }
+        };
+
+        const setLoadingUi = (isLoading) => {
+            button.disabled = isLoading;
+            button.classList.toggle("is-loading", isLoading);
         };
 
         const playMusic = async () => {
+            setLoadingUi(true);
+
             try {
+                audio.load();
                 await audio.play();
                 preferredPlaying = true;
                 localStorage.setItem(storedMusicState, "true");
@@ -173,7 +187,10 @@
                 preferredPlaying = false;
                 localStorage.setItem(storedMusicState, "false");
                 setPlayingUi(false);
-                console.info("Background music is unavailable until a valid music/bg.mp3 file is added.");
+                button.title = "Tap again after the music file finishes loading. If it still fails, check music/bg.mp3.";
+                console.info("Background music could not start.", error);
+            } finally {
+                setLoadingUi(false);
             }
         };
 
@@ -184,17 +201,7 @@
             setPlayingUi(false);
         };
 
-        const unlockAudio = () => {
-            interactionReceived = true;
-            if (preferredPlaying) {
-                playMusic();
-            }
-            window.removeEventListener("pointerdown", unlockAudio);
-            window.removeEventListener("keydown", unlockAudio);
-        };
-
         button.addEventListener("click", () => {
-            interactionReceived = true;
             if (audio.paused) {
                 playMusic();
             } else {
@@ -202,17 +209,18 @@
             }
         });
 
+        audio.addEventListener("play", () => setPlayingUi(true));
+        audio.addEventListener("pause", () => setPlayingUi(false));
+
         audio.addEventListener("error", () => {
             pauseMusic();
-            button.setAttribute("title", "Replace music/bg.mp3 with a valid MP3 file to enable music.");
+            button.title = "Music could not be loaded. Check music/bg.mp3.";
         });
 
-        window.addEventListener("pointerdown", unlockAudio, { once: true });
-        window.addEventListener("keydown", unlockAudio, { once: true });
         setPlayingUi(false);
 
-        if (!interactionReceived && preferredPlaying) {
-            button.setAttribute("title", "Music will resume after your first interaction.");
+        if (preferredPlaying) {
+            button.title = "Tap to resume music";
         }
     };
 
